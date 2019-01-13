@@ -5,15 +5,23 @@
   
 
   
-  <title>Hexo</title>
+  <title>单例模式的坑 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1.前言最近用到了单例，在并发下有些坑，记录下 2.第一次实现的单例模式1234567891011121314151617public class User &amp;#123;    private static User user;    public static User getInstance()&amp;#123;        if(null == user)&amp;#123;            //">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单例模式的坑">
+<meta property="og:url" content="http://yoursite.com/2019/01/13/单例模式的坑/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1.前言最近用到了单例，在并发下有些坑，记录下 2.第一次实现的单例模式1234567891011121314151617public class User &amp;#123;    private static User user;    public static User getInstance()&amp;#123;        if(null == user)&amp;#123;            //">
 <meta property="og:locale" content="zh-cn">
+<meta property="og:image" content="http://yoursite.com/2019/01/13/单例模式的坑/1547383744877.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/13/单例模式的坑/1547384100911.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/13/单例模式的坑/1547384335229.png">
+<meta property="og:updated_time" content="2019-01-13T13:19:54.998Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="单例模式的坑">
+<meta name="twitter:description" content="1.前言最近用到了单例，在并发下有些坑，记录下 2.第一次实现的单例模式1234567891011121314151617public class User &amp;#123;    private static User user;    public static User getInstance()&amp;#123;        if(null == user)&amp;#123;            //">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/13/单例模式的坑/1547383744877.png">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-单例模式的坑" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-单例模式的坑" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/01/13/单例模式的坑/" class="article-date">
   <time datetime="2019-01-13T12:17:43.000Z" itemprop="datePublished">2019-01-13</time>
@@ -75,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/13/单例模式的坑/">单例模式的坑</a>
+    <h1 class="article-title" itemprop="name">
+      单例模式的坑
     </h1>
   
 
@@ -122,94 +128,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-2019年滴小计划" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/06/2019年滴小计划/" class="article-date">
-  <time datetime="2019-01-06T13:23:03.000Z" itemprop="datePublished">2019-01-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/06/2019年滴小计划/">2019年滴小计划</a>
-    </h1>
+    <a href="/2019/01/06/2019年滴小计划/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019年滴小计划</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="0-开篇瞎扯"><a href="#0-开篇瞎扯" class="headerlink" title="0.开篇瞎扯"></a>0.开篇瞎扯</h2><p>​    搭个博客自己玩吧，玩不一样的，嘿嘿嘿</p>
-<p>​    计划是每周写一篇吧，随便写点什么吧，还是以技术为主</p>
-<p>​    先把今年的计划写下来，鞭策下自己</p>
-<p>​    （反正开源的也不一定有人看，就这么玩着吧，反正不涉及啥隐私…）</p>
-<p>​    </p>
-<p>​    以下，分为两个部分吧：</p>
-<h2 id="1-技术向"><a href="#1-技术向" class="headerlink" title="1.技术向"></a>1.技术向</h2><ul>
-<li><p>4月前把算法这本书吃下来。算下来，今天1月初，过年耽误10天的样子，时间不多，2个半月吧，努努力，先看个大概。数据结构真的真的很重要。</p>
-</li>
-<li><p>学个新语言，如果没啥意外就是<em>Go</em>了。这个语言怕是有点蛇精病… 不过挺好玩的</p>
-<p>​                                <img src="/2019/01/06/2019年滴小计划/1546780485439.png" alt="1546780485439">        </p>
-</li>
-<li><p><em>JavaScript</em>的话理论上是原理方面还要精进一下，框架慢慢来吧，有更重要的事！</p>
-</li>
-<li><p>分布式<em>Service Mesh</em> 这个学习一下吧，<em>SpringBoot</em>还是研究下，不然迟早要出事</p>
-</li>
-<li><p>同时，去补下<em>http</em>相关知识，这个方面也有点缺…</p>
-</li>
-<li><p>CSS前端之流我是真的不想了..当初说啥就不该说自己会这玩意..折磨人…</p>
-<p>​                                      <img src="/2019/01/06/2019年滴小计划/1546780803688.png" alt="1546780803688"></p>
-</li>
-<li><p><em>Java</em>自己弱在哪里还是很清楚的，多线程和设计模式再补补吧，自己设计这块还是欠缺了一点</p>
-</li>
-<li><p>编译原理，虚拟机之类的今年要动动想法了</p>
-</li>
-<li><p>一周一更，风吹雨打不动摇…</p>
-</li>
-</ul>
-<p>​    </p>
-<h2 id="2-苟活着"><a href="#2-苟活着" class="headerlink" title="2.苟活着"></a>2.苟活着</h2><ul>
-<li><p>今年睡早一点吧，没事别修仙了…少喝咖啡饮料乱七八糟，喝茶养生吧…</p>
-</li>
-<li><p>找个新的爱好吧，要不学学摄影？（靠，好烧钱啊）</p>
-</li>
-<li><p>再再再买个显示器？（种草X34P）</p>
-</li>
-<li><p>追个姑娘吧，认真的！</p>
-</li>
-<li><p>知乎少刷了，Kindle上的数还有好几本没看诶。</p>
-</li>
-<li><p>多出去走走吧，反正去公园我都不用花钱了…(讲真，整个单反玩玩？总比玩耳机好吧..)</p>
-<p>​                                    <img src="/2019/01/06/2019年滴小计划/1546781646790.png" alt="1546781646790"></p>
-</li>
-<li><p>PC连带手机这块今年还是不更新吧，又不是不能用，讲道理，835现在还不卡，真香啊（如果能把这台式机卖了我就去玩ITX）</p>
-</li>
-</ul>
-<h2 id="3-远方…"><a href="#3-远方…" class="headerlink" title="3.远方…"></a>3.远方…</h2><p>狗屁远方，帝都挺好！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/06/2019年滴小计划/" data-id="cjquxl5o30000r8tb1yf32gn5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
